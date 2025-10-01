@@ -7,14 +7,14 @@ import { useState } from "react";
 const categories = ["All", "Tile", "Marble", "Texture", "Stone"];
 
 const products = [
-  { id: 1, name: "Classic Marble White", category: "Marble", price: "₹89/sqm" },
-  { id: 2, name: "Modern Stone Grey", category: "Stone", price: "₹75/sqm" },
-  { id: 3, name: "Premium Ceramic Tile", category: "Tile", price: "₹65/sqm" },
-  { id: 4, name: "Textured Oak Wood", category: "Texture", price: "₹95/sqm" },
-  { id: 5, name: "Elegant Black Marble", category: "Marble", price: "₹120/sqm" },
-  { id: 6, name: "Rustic Stone Pattern", category: "Stone", price: "₹85/sqm" },
-  { id: 7, name: "Glossy White Tile", category: "Tile", price: "₹55/sqm" },
-  { id: 8, name: "Natural Wood Texture", category: "Texture", price: "₹100/sqm" },
+  { id: 1, name: "Classic Marble White", category: "Marble", price: 89, dimensions: "4*4" },
+  { id: 2, name: "Modern Stone Grey", category: "Stone", price: 75, dimensions: "3*3" },
+  { id: 3, name: "Premium Ceramic Tile", category: "Tile", price: 65, dimensions: "2*2" },
+  { id: 4, name: "Textured Oak Wood", category: "Texture", price: 95, dimensions: "4*6" },
+  { id: 5, name: "Elegant Black Marble", category: "Marble", price: 120, dimensions: "4*4" },
+  { id: 6, name: "Rustic Stone Pattern", category: "Stone", price: 85, dimensions: "3*4" },
+  { id: 7, name: "Glossy White Tile", category: "Tile", price: 55, dimensions: "2*2" },
+  { id: 8, name: "Natural Wood Texture", category: "Texture", price: 100, dimensions: "4*8" },
 ];
 
 const Gallery = () => {
@@ -52,7 +52,7 @@ const Gallery = () => {
                 <h3 className="font-semibold text-sm">{product.name}</h3>
                 <p className="text-xs text-muted-foreground">{product.category}</p>
                 <div className="flex items-center justify-between">
-                  <span className="font-bold">{product.price}</span>
+                  <span className="font-bold">Rs. {product.price}({product.dimensions}) Feet</span>
                   <Button size="sm" variant="outline">
                     View Details
                   </Button>
