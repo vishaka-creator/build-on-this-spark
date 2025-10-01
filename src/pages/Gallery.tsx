@@ -7,14 +7,14 @@ import { useState } from "react";
 const categories = ["All", "Tile", "Marble", "Texture", "Stone"];
 
 const products = [
-  { id: 1, name: "Classic Marble White", category: "Marble", price: "$89/sqm" },
-  { id: 2, name: "Modern Stone Grey", category: "Stone", price: "$75/sqm" },
-  { id: 3, name: "Premium Ceramic Tile", category: "Tile", price: "$65/sqm" },
-  { id: 4, name: "Textured Oak Wood", category: "Texture", price: "$95/sqm" },
-  { id: 5, name: "Elegant Black Marble", category: "Marble", price: "$120/sqm" },
-  { id: 6, name: "Rustic Stone Pattern", category: "Stone", price: "$85/sqm" },
-  { id: 7, name: "Glossy White Tile", category: "Tile", price: "$55/sqm" },
-  { id: 8, name: "Natural Wood Texture", category: "Texture", price: "$100/sqm" },
+  { id: 1, name: "Classic Marble White", category: "Marble", price: "₹89/sqm" },
+  { id: 2, name: "Modern Stone Grey", category: "Stone", price: "₹75/sqm" },
+  { id: 3, name: "Premium Ceramic Tile", category: "Tile", price: "₹65/sqm" },
+  { id: 4, name: "Textured Oak Wood", category: "Texture", price: "₹95/sqm" },
+  { id: 5, name: "Elegant Black Marble", category: "Marble", price: "₹120/sqm" },
+  { id: 6, name: "Rustic Stone Pattern", category: "Stone", price: "₹85/sqm" },
+  { id: 7, name: "Glossy White Tile", category: "Tile", price: "₹55/sqm" },
+  { id: 8, name: "Natural Wood Texture", category: "Texture", price: "₹100/sqm" },
 ];
 
 const Gallery = () => {

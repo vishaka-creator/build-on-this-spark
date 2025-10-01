@@ -37,10 +37,10 @@ const Purchase = () => {
                       <div className="flex-1">
                         <h3 className="font-semibold">{item.name}</h3>
                         <p className="text-sm text-muted-foreground">
-                          {item.quantity} {item.unit} × ${item.price}
+                          {item.quantity} {item.unit} × ₹{item.price}
                         </p>
                         <p className="font-bold mt-1">
-                          ${item.price * item.quantity}
+                          ₹{item.price * item.quantity}
                         </p>
                       </div>
                       <Button variant="ghost" size="icon">
@@ -59,15 +59,15 @@ const Purchase = () => {
               <CardContent className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>${total}</span>
+                  <span>₹{total}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Delivery</span>
-                  <span>$50</span>
+                  <span>₹50</span>
                 </div>
                 <div className="flex justify-between font-bold text-lg pt-2 border-t">
                   <span>Total</span>
-                  <span>${total + 50}</span>
+                  <span>₹{total + 50}</span>
                 </div>
               </CardContent>
             </Card>
