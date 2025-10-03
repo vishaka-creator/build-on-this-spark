@@ -3,18 +3,26 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import marbleWhite from "@/assets/marble-white.jpg";
+import stoneGrey from "@/assets/stone-grey.jpg";
+import tileCeramic from "@/assets/tile-ceramic.jpg";
+import textureOak from "@/assets/texture-oak.jpg";
+import marbleBlack from "@/assets/marble-black.jpg";
+import stoneRustic from "@/assets/stone-rustic.jpg";
+import tileWhite from "@/assets/tile-white.jpg";
+import textureWood from "@/assets/texture-wood.jpg";
 
 const categories = ["All", "Tile", "Marble", "Texture", "Stone"];
 
 const products = [
-  { id: 1, name: "Classic Marble White", category: "Marble", price: 89, dimensions: "4*4" },
-  { id: 2, name: "Modern Stone Grey", category: "Stone", price: 75, dimensions: "3*3" },
-  { id: 3, name: "Premium Ceramic Tile", category: "Tile", price: 65, dimensions: "2*2" },
-  { id: 4, name: "Textured Oak Wood", category: "Texture", price: 95, dimensions: "4*6" },
-  { id: 5, name: "Elegant Black Marble", category: "Marble", price: 120, dimensions: "4*4" },
-  { id: 6, name: "Rustic Stone Pattern", category: "Stone", price: 85, dimensions: "3*4" },
-  { id: 7, name: "Glossy White Tile", category: "Tile", price: 55, dimensions: "2*2" },
-  { id: 8, name: "Natural Wood Texture", category: "Texture", price: 100, dimensions: "4*8" },
+  { id: 1, name: "Classic Marble White", category: "Marble", price: 89, dimensions: "4*4", image: marbleWhite },
+  { id: 2, name: "Modern Stone Grey", category: "Stone", price: 75, dimensions: "3*3", image: stoneGrey },
+  { id: 3, name: "Premium Ceramic Tile", category: "Tile", price: 65, dimensions: "2*2", image: tileCeramic },
+  { id: 4, name: "Textured Oak Wood", category: "Texture", price: 95, dimensions: "4*6", image: textureOak },
+  { id: 5, name: "Elegant Black Marble", category: "Marble", price: 120, dimensions: "4*4", image: marbleBlack },
+  { id: 6, name: "Rustic Stone Pattern", category: "Stone", price: 85, dimensions: "3*4", image: stoneRustic },
+  { id: 7, name: "Glossy White Tile", category: "Tile", price: 55, dimensions: "2*2", image: tileWhite },
+  { id: 8, name: "Natural Wood Texture", category: "Texture", price: 100, dimensions: "4*8", image: textureWood },
 ];
 
 const Gallery = () => {
@@ -47,7 +55,7 @@ const Gallery = () => {
         <div className="grid grid-cols-2 gap-4">
           {filteredProducts.map((product) => (
             <Card key={product.id} className="overflow-hidden">
-              <div className="aspect-square bg-muted" />
+              <img src={product.image} alt={product.name} className="aspect-square w-full object-cover" />
               <CardContent className="p-4 space-y-2">
                 <h3 className="font-semibold text-sm">{product.name}</h3>
                 <p className="text-xs text-muted-foreground">{product.category}</p>
